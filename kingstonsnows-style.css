@@ -1,0 +1,50 @@
+#header{
+    background-image:url("/kingstonsnows/images/snowmanheaderbackground.jpeg");
+    background-position: 1730px 155px;
+    text-align:bottom;
+    height:145px;
+    width:80%;
+    margin:auto;
+
+
+}
+body{
+    background-image:url("/kingstonsnows/images/mainbackground.png");
+    background-attachment: fixed;
+    font-family:Arial, Helvetica, sans-serif;
+   
+}
+#content{
+    background-color:white;
+    color:blue;
+    font-size:1em;
+    font-weight:bold;
+    text-align:center;
+    position:relative;
+    bottom:-14px;
+    width:80%;
+    margin:auto;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display:inline;
+}
+li{
+    float:left;
+    width:20%;
+    text-align:center;
+}
+li a{
+    display: block;
+    padding:10px;
+    background-color:#00ff00;
+    font-size:150%;
+    position:relative;
+    bottom:-51px;
+}
+#yes{
+    background-color:green;
+}
