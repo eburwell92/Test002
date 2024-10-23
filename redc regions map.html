@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDC - Central New York SVG</title>
+    <style>
+        /* Ensure the object tag is styled appropriately */
+        object {
+            display: block;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>REDC - Central New York Region</h1>
+
+    <!-- Row of checkboxes -->
+    <div>
+        <label><input type="radio" name="color" value="green" onclick="changeSVGColor('green')"> Very Low</label>
+        <label><input type="radio" name="color" value="yellow" onclick="changeSVGColor('yellow')"> Low</label>
+        <label><input type="radio" name="color" value="orange" onclick="changeSVGColor('orange')"> Medium</label>
+        <label><input type="radio" name="color" value="red" onclick="changeSVGColor('red')"> High</label>
+        <label><input type="radio" name="color" value="pink" onclick="changeSVGColor('pink')"> Very High</label>
+    </div>
+
+    <!-- Embed the SVG file -->
+    <object id="svg-object" type="image/svg+xml" data="/Users/ethan/Desktop/GIS - Projects/NYS Mapping Layers/redc region svgs/REDC - Mid Hudson.svg" width="100%" height="600px">
+        Your browser does not support viewing this SVG file.
+    </object>
+
+    <script>
+        // Function to change the color of the SVG
+        function changeSVGColor(color) {
+            // Access the SVG file inside the object tag
+            const svgObject = document.getElementById('svg-object').contentDocument;
+            const svg = svgObject.querySelector('svg');
+            
+            // Change the fill color of the entire SVG or specific elements inside the SVG
+            if (svg) {
+                svg.style.fill = color;
+            } else {
+                console.error("SVG not loaded or not accessible.");
+            }
+        }
+    </script>
+
+</body>
+</html>
